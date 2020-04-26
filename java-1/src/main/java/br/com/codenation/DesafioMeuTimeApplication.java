@@ -242,12 +242,10 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 		
 		Time timeAdversario = new Time();
 		
-		for(Time time : times) {
-			
-			if(time.getId().equals(timeDaCasa)) { timeMandante = time;}
-			
-			if(time.getId().equals(timeDeFora)) { timeAdversario = time; }
-		}
+		timeMandante = buscarTime(timeDaCasa);
+		
+		timeAdversario = buscarTime(timeDeFora);
+		
 		
 		if(timeMandante.getCorUniformePrincipal().equals(timeAdversario.getCorUniformePrincipal())) {
 			
